@@ -1,6 +1,6 @@
 # OpenCV Streaming 📹
 
-This project demonstrates real-time video streaming between a client and a server using OpenCV and Python. The client captures video from a webcam, compresses it, and sends it to the server over a UDP socket. The server receives the video stream, decodes it, and displays it in real-time.
+This application demonstrates real-time video streaming between a client and a server using OpenCV and Python. The client captures video from a webcam, compresses it, and sends it to the server over a UDP socket. The server receives the video stream, decodes it, and displays it in real-time.
 
 ## Features ✨
 
@@ -11,7 +11,7 @@ This project demonstrates real-time video streaming between a client and a serve
 
 ## Requirements 📋
 
-To run this project, ensure you have the following dependencies installed:
+To run this application, ensure you have the following dependencies installed:
 
 ```plaintext
 numpy==1.24.3
@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 ## Directory Structure 📂
 
-The project directory is organized as follows:
+The application directory is organized as follows:
 
 ```
 OpenCV-streaming/
@@ -77,7 +77,7 @@ Each physical or virtual camera connected to your system is assigned an index nu
 - `1` → An external USB camera (if connected)
 - `2, 3, etc.` → Other cameras or virtual video devices
 
-This project uses the following code to access the default camera:
+This application uses the following code to access the default camera:
 
 ```python
 cap = cv2.VideoCapture(0)
@@ -87,10 +87,11 @@ cap = cv2.VideoCapture(0)
 
 - Ensure both the client and server are running on the same network.
 - Update the `server_ip` and `server_port` variables in `OpenCVClient.py` if the server is running on a different machine.
+- This application works without an internet connection as long as the client and server are on the same local network (e.g., connected to the same Wi-Fi or via Ethernet). The communication happens over UDP, which does not require internet access.
 
 ## License 📜
 
-This project is licensed under the MIT License. See [LICENSE](./LICENSE) for details.
+This application is licensed under the MIT License. See [LICENSE](./LICENSE) for details.
 
 ## Acknowledgments 🙌
 
